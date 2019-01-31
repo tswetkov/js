@@ -1,7 +1,13 @@
-// Global app controller
+import axios from 'axios';
 
-import num from './test';
+import { key } from './key';
 
-const x = 23;
-
-console.log(`num = ${num} x = ${x} `);
+async function getResults(query) {
+  try {
+    const data = await axios(`https://www.food2fork.com/api/search?key=${key}&q=${query}`);
+    console.log(data.data.recipes);
+  } catch (error) {
+    console.warn(error);
+  }
+}
+getResults('pasta');
