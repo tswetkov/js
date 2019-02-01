@@ -1,13 +1,32 @@
-import axios from 'axios';
+import { Search } from './models/Search';
 
-import { key } from './key';
+/**Global state of the app
+ * - Search object
+ * - Current recipe object
+ * - Shopping list object
+ * - Liked recipes
+ */
+const state = {};
 
-async function getResults(query) {
-  try {
-    const data = await axios(`https://www.food2fork.com/api/search?key=${key}&q=${query}`);
-    console.log(data.data.recipes);
-  } catch (error) {
-    console.warn(error);
+const controlSearch = async () => {
+  // 1. Get cuery from view
+  const query = 'pizza';
+
+  if (query) {
+    // 2. New search object and add to state
+    state.search = new Search(query);
+
+    // 3. Preapare UI for results
+
+    // 4. Search for recipes
+    await state.search.getResults();
+
+    // 5. Render results on UI
+    console.log(state.search.result);
   }
-}
-getResults('pasta');
+};
+
+document.querySelector('.search').addEventListener('submit', e => {
+  e.preventDefault();
+  controlSearch();
+});
