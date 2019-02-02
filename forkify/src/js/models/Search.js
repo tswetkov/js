@@ -3,6 +3,7 @@ import { key } from '../key';
 
 export class Search {
   constructor(query) {
+    console.log('query', query);
     this.query = query;
   }
 
@@ -10,9 +11,9 @@ export class Search {
     try {
       const data = await axios(`https://www.food2fork.com/api/search?key=${key}&q=${this.query}`);
       this.result = data.data.recipes;
-      // console.log(this.result);
+      console.log('data', data);
     } catch (error) {
-      alert(error);
+      console.error(error);
     }
   }
 }
