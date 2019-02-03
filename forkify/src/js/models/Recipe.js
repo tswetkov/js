@@ -100,7 +100,6 @@ export class Recipe {
   }
 
   updateServings(type) {
-    console.log(type);
     // Servings
     const newServings = type === 'dec' ? this.servings - 1 : this.servings + 1;
 
