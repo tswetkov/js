@@ -1,6 +1,6 @@
 # Budgety
 
-This is a project on pure js, for track of the budget
+This is a project on pure js, for track of the budget.
 
 # Forkify
 
