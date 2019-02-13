@@ -4,7 +4,7 @@ This is a project on pure js, for track of the budget.
 
 # Forkify
 
-This is a project on pure js, for showing pizzas recipes
+This is a project on pure js, for showing pizzas recipes.
 
 # OOP-in-js
 
