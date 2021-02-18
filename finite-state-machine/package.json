@@ -1,0 +1,21 @@
+{
+  "name": "finite-state-machine",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "parcel": "1.12.4"
+  },
+  "devDependencies": {
+    "prettier": "2.2.1"
+  },
+  "browserslist": [
+    "last 1 Chrome version"
+  ]
+}
